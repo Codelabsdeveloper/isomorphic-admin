@@ -1,0 +1,72 @@
+
+.storeslistcontainer {
+  width: 100%;
+  max-height: calc(84vh);
+  // overflow: hidden;
+  overflow-y: auto;
+  // padding-bottom: 20px;
+
+  .storetitle{
+    font-size: 1.5em;
+    padding-right: 13vh;
+  }
+  .storescontainer {
+    border-bottom: 1px solid var(--teal);
+    cursor: pointer;
+    margin-top: 10px;
+
+    .headers {
+        width: 100%;
+        padding: 5px;
+        align-items: center;
+
+        p {
+          margin: 0;
+          padding: 0;
+          padding-left: 15px;
+        }
+      }
+
+    .row {
+        width: inherit;
+        justify-content: space-between;
+        padding: 10px 0px;
+        align-items: center;
+
+        p {
+          margin: 0;
+          padding: 0;
+          font-size: clamp(12px, 1vw, 14px);
+          font-weight: 600;
+          padding-left: 8px;
+          padding:5px;
+        }
+
+        .subtotal {
+          width: inherit;
+          justify-content: space-between;
+          background-color: var(--white);
+          padding: 5px;
+        }
+      }
+
+    .active {
+      background: #e0fff7;
+      .headers {
+        background-color: var(--teal);
+        p {
+          color: var(--white);
+          background: var(--teal);
+        }
+      }
+
+      .row {
+        .subtotal {
+          background-color: var(--white);
+        }
+      }
+    }
+    
+  }
+  
+}

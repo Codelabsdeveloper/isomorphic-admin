@@ -1,0 +1,20 @@
+@import '@Assets/styles/Mixins';
+
+.container {
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+
+  @include media-break-point-up(lg) {
+    padding: 0;
+    max-width: calc(100% - 120px);
+  }
+
+  @include media-break-point-up(xl) {
+    max-width: calc(100% - 180px);
+  }
+
+  @include media-break-point-up(xxl) {
+    max-width: calc(100% - 240px);
+  }
+}

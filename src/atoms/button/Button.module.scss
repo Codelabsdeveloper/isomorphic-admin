@@ -1,0 +1,146 @@
+@import '@Assets/styles/Colors.scss';
+@import '@Assets/styles/Mixins.scss';
+@import '@Assets/styles/Variables.scss';
+@import '@Assets/styles/KeyFrames.scss';
+
+$OPTIONS_SIZE: 'extra-small', 'small', 'medium', 'large', 'nosize';
+
+$OPTIONS_TYPE: (
+  'primary': (
+    var(--teal),
+    var(--white),
+    var(--white),
+    var(--tropical-rain-forest),
+    '',
+  ),
+  'secondary': (
+    var(--bluish),
+    var(--white),
+    var(--white),
+    var(--water-blue),
+    var(--water-blue),
+  ),
+  'tertiary': (
+    transparent,
+    var(--black),
+    '',
+    '',
+    '',
+  ),
+  'primary-light': (
+    var(--white),
+    var(--teal),
+    '',
+    '',
+    var(--teal),
+  ),
+);
+
+@mixin construct-button-styles($bgColor, $color, $focusColor, $focusBgColor, $borderColor) {
+  background-color: $bgColor;
+  color: $color;
+
+  &:hover,
+  &:focus {
+    background-color: $focusBgColor;
+    color: $focusColor;
+
+    @if $borderColor != '' {
+      border-color: $borderColor;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+@each $var, $val in $OPTIONS_TYPE {
+  .theme-#{$var} {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+
+    @if ($var == 'primary') {
+      border: none;
+    } @else if ($var == 'secondary') {
+      border: none;
+    } @else if ($var == 'tertiary') {
+      padding: 0 !important;
+      min-width: initial !important;
+      max-width: initial !important;
+      justify-content: flex-start !important;
+      width: fit-content !important;
+    } @else if($var == 'primary-light') {
+      border: 1px solid;
+    }
+
+    @include construct-button-styles($val...);
+  }
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: clamp(14px, 0.9vw, 16px);
+  cursor: pointer;
+  padding: 20px 90px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  justify-content: center;
+  font-family: $NeuePlakRegular;
+  margin:10px;
+
+  @include media-break-point-up(sm) {
+    font-size: clamp(16px, 1.32vw, 18px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .spinner {
+      animation: none;
+    }
+  }
+
+  .spinner {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: spinner 0.75s linear infinite;
+    margin-right: 10px;
+  }
+}
+
+@each $var in $OPTIONS_SIZE {
+  .size-#{$var} {
+    @if ($var == 'extra-small') {
+      min-height: 40px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      min-width: 50px;
+      width: fit-content;
+      font-weight: 500;
+    } @else if ($var == 'small') {
+      min-height: 40px;
+      padding: 10px 60px;
+      border-radius: 5px;
+      min-width: 150px;
+      max-width: 250px;
+    } @else if ($var == 'medium') {
+      min-height: 45px;
+      min-width: 250px;
+      max-width: 350px;
+    } @else if ($var == 'large') {
+      min-height: 50px;
+      min-width: 180px;
+    } @else if ($var == 'nosize') {
+      max-width: 100%;
+      min-width: 120px;
+      width: 100%;
+      height: 50px;
+    }
+  }
+}

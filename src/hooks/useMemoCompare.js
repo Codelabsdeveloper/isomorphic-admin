@@ -1,0 +1,33 @@
+/*
+ * File: useMemoCompare.js
+ * Project: codelabs-boilderplate
+ * Created Date: Sun Aug 28 2022 12:57:50 PM
+ * Author: Mohammed Parveez <ahamed.parveez@gmail.com>
+ * ------------------------------------
+ *
+ * Copyright (c) 2022 All rights reserved by Codelabs
+ * ------------------------------------
+ */
+
+import { useEffect, useRef } from 'react';
+
+function useMemoCompare(next, compare) {
+  // Ref for storing previous value
+  const previousRef = useRef();
+  const previous = previousRef.current;
+  // Pass previous and next value to compare function
+  // to determine whether to consider them equal.
+  const isEqual = compare(previous, next);
+  // If not equal update previousRef to next value.
+  // We only update if not equal so that this hook continues to return
+  // the same old value if compare keeps returning true.
+  useEffect(() => {
+    if (!isEqual) {
+      previousRef.current = next;
+    }
+  });
+  // Finally, if equal then return the previous value
+  return isEqual ? previous : next;
+}
+
+export default useMemoCompare;

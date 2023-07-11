@@ -1,0 +1,56 @@
+.header {
+    width: 100%;
+    background-color: var(--teal);
+    box-shadow: 4px 0px 0.6rem 0.15rem #ececec;
+    height: 120px;
+    z-index: 1;
+
+    .logocontainer {
+      padding: 10px;
+    }
+
+    img {
+      position: relative;
+      top: -0px;
+      width: 70%;
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-size: clamp(18px, 1.1vw, 22px);
+      height: 60px;
+      align-items: center;
+      width: calc(100vw - 42%);
+      text-align: center;
+      h3 {
+        color: var(--white);
+        text-align: center;
+        width: inherit;
+      }
+    }
+
+    .headercontainer {
+      padding-top: 10px;
+    }
+
+    .icons {
+      justify-content: end;
+      margin-top: 0px;
+
+      span {
+        font-size: 16px;
+
+        .text {
+          font-size: 14px;
+          position:relative;
+          top: -3px;
+          text-transform: none;
+          padding-left: 10px;
+        }
+        display: flex;
+        margin-right: 28px;
+        cursor: pointer;
+        color: var(--white);
+      }
+    }
+  }

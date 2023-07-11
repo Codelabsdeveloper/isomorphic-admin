@@ -1,0 +1,27 @@
+.dashedContent {
+  color: var(--mountain-mist);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: var(--mountain-mist);
+    margin: 10px;
+  }
+
+  &::after {
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: var(--mountain-mist);
+    margin: 10px;
+  }
+
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+}

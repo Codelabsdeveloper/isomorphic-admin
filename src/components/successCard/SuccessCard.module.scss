@@ -1,0 +1,23 @@
+.successCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  width: 450px;
+
+  &-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+      color: var(--tropical-rain-forest);
+    }
+
+    &-subtitle {
+      color: var(--mountain-mist);
+      text-align: center;
+    }
+  }
+}

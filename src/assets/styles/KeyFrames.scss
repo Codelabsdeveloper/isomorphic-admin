@@ -1,0 +1,91 @@
+
+@keyframes loadingAnimationOpacity {
+  0% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes loadingAnimationBackground {
+  0% {
+    background-color: $white;
+  }
+
+  50% {
+    background-color: $palette-grey-gallery;
+  }
+
+  100% {
+    background-color: $white;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveInputPlaceholder {
+  from { 
+      margin-top: 0; 
+      margin-left: 0; 
+  }
+
+  to {
+      margin-top: -26px; 
+      margin-left: 0; 
+  }
+}
+
+@keyframes spinnerLarge {
+  0% { 
+      transform: rotate(0deg);
+  }
+  100% { 
+      transform: rotate(360deg); 
+  }
+}

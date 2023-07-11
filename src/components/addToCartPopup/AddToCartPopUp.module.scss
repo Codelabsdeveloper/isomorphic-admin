@@ -1,0 +1,67 @@
+.addToCartPopUp {
+  position: absolute;
+  z-index: 1000;
+  padding: 10px;
+  background-color: white;
+  color: grey;
+  width: 350px;
+  height: auto;
+  box-shadow: 1px 0px 7px 0px #ddd8d8;
+
+  .image {
+    // width: 140px;
+    // height: 140px;
+    // margin-top: 45px;
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      // width: inherit;
+      height: 200px;
+    }
+  }
+
+  .closeicon {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    top: 0px;
+    cursor: pointer;
+    z-index: 5;
+    font-size: 30px;
+
+    svg {
+      fill: var(--black);
+    }
+  }
+
+  .title {
+    padding-top: 10px;
+    h4 {
+      color: var(--teal);
+      // font-size: clamp(30px, 1.1vw, 22px);
+      font-size: 30px;
+    }
+  }
+
+  .content {
+    p {
+      margin: 0;
+      // line-height: 1.7;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 20px;
+  }
+
+  .button {
+    padding: 4px !important;
+    width: 150px;
+    max-width: initial;
+    min-width: auto;
+  }
+}

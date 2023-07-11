@@ -1,0 +1,145 @@
+{
+  "messages": {
+    "app_type": "WEB-APP",
+    "profile": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "fullName": "Full Name",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "mobileNumber": "Mobile Number",
+      "OTP": "OTP",
+      "error": {
+        "valid_firstName": "Please enter valid First Name",
+        "valid_lastName": "Please enter valid Last Name",
+        "valid_mobileNumber": "Please enter valid Mobile Number"
+      }
+    },
+    "payment": {
+      "error": {
+        "credit_card": "Invalid Credit Card Number",
+        "credit_card_name": "Invalid value",
+        "credit_card_expiry": "Please enter card expiry date",
+        "credit_card_cvv": "Please enter your Security Code"
+      }
+    },
+    "login": {
+      "title": "Login",
+      "subTitle": "Enter Your Credentials To Access Your Account",
+      "login_button": "Login",
+      "google_button": "Login with Google",
+      "input": {
+        "label_email": "Email",
+        "label_phone_number": "Phone Number",
+        "label_password": "Password"
+      },
+      "error": {
+        "auth_failed": "Invalid username or password"
+      }
+    },
+    "otp": {
+      "title": "Enter OTP",
+      "subTitle": "We'll send you a 4 digit OTP on your mobile number for verification",
+      "otp_button": "Submit"
+    },
+    "register_brand": {
+      "form1": {
+        "title": "Register Your Brand",
+        "brandName": "Brand Name",
+        "selectCity": "Select City",
+        "selectArea": "Select Area",
+        "brandTurnover": "Brand Turnover",
+        "next_button": "Next"
+      },
+      "form2": {
+        "title": "Understanding Your Audience Goals",
+        "age": "Age",
+        "gender": "Gender",
+        "profession": "Profession",
+        "householdIncome": "Household Income",
+        "region": "Region",
+        "submit_button": "Submit"
+      },
+      "formSuccess": {
+        "title": "Thank you.",
+        "subTitle": "We look forward to providing you with smart effective methods of capturing your target audiences.",
+        "next_button": "Next"
+      }
+    },
+    "preferences": {
+      "title": "Preferences",
+      "spaceType": "SPECE TYPE",
+      "RentalCost": "RENTAL COST",
+      "brandingDimensions": "BRANDING DIMENSIONS",
+      "hoursOfBusiness": "HOURS OF BUSINESS",
+      "signType": "SIGN TYPE",
+      "byFootfall": "BY FOOTFALL"
+    },
+    "store_details": {
+      "store_name": "Store Name",
+      "available_address": "Available Address",
+      "agreement_type": "Agreement Type",
+      "duration_options": "Duration Options",
+      "const_scheme": "Cost Scheme",
+      "other_store_details": "Other Store Details",
+      "image": "Image",
+      "reviews": "Reviews",
+      "cost_calculations": "Cost Calculations",
+      "button_name": "Continue"
+    },
+    "shedule_campaign": {
+      "left_nav": {
+        "total": "Total ",
+        "ads": "Ads",
+        "scheduled_quantity": "Scheduled Quantity",
+        "scheduled_date": "Scheduled Date",
+        "rate": "Rate",
+        "sub_total": "SUB TOTAL INC.TAX(18% GST)"
+      }
+    },
+    "cart": {
+      "table": {
+        "header": {
+          "shop_name": "Shop Name",
+          "location": "Location",
+          "duration": "Duration",
+          "dimensions": "Dimensions",
+          "cost": "Cost"
+        }
+      },
+      "card": {
+        "total_days": "Total Days:",
+        "total_stores": "Total Stores:",
+        "total_gst": "Total GST:",
+        "total_cost": "Total Cost:",
+        "summary": "Summary of the cost"
+      },
+      "card_summary": {
+        "title": "Summary of the cost",
+        "cost_of": "Cost of",
+        "shop": "shop",
+        "ad_space": "AD Space covered",
+        "brand_print_cost": "BRAND Printing Cost",
+        "total": "TOTAL"
+      },
+      "formSuccess": {
+        "title": "Thank you.",
+        "subTitle": "Thank you for your purchase. Please proceed to find out how to customise your interactions. An Email is sent to you with all the details.",
+        "next_button": "Next"
+      }
+    },
+    "brands": {
+      "brand_name_start": "Brand name start"
+    },
+    "footer": {
+      "title": "footer title"
+    },
+    "header": {
+      "title": "header title"
+    },
+    "overlay": {
+      "skip_video": "Skip Video"
+    }
+  },
+  "errors": {}
+}

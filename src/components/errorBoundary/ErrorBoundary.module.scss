@@ -1,0 +1,50 @@
+@import '@Assets/styles/Mixins.scss';
+@import '@Assets/styles/Colors.scss';
+
+.errorBoundary {
+  padding-top: 20px;
+  background: $natural;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+
+  @include media-break-point-down(sm) {
+    height: fit-content;
+    padding-bottom: 10px;
+  }
+
+  &-desc {
+    font-size: clamp(30px, 2.2vw, 35px);
+    letter-spacing: 0;
+    font-weight: bold;
+    font-style: italic;
+
+    @include media-break-point-down(sm) {
+      font-size: clamp(18px, 1.1vw, 22px);
+    }
+  }
+
+  .subText {
+    font-size: clamp(20px, 1.8vw, 25px);
+
+    @include media-break-point-down(sm) {
+      font-size: clamp(15px, 1.25vw, 17px);
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: underline;
+      padding: 0 5px;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 45%;
+
+    @include media-break-point-down(sm) {
+      width: 100%;
+    }
+  }
+}

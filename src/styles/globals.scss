@@ -1,0 +1,268 @@
+@import '@Assets/styles/Colors.scss';
+@import '@Assets/styles/Mixins.scss';
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --red: #ff0000;
+  --teal: #169576;
+  --tropical-rain-forest: #0b755b;
+  --bluish: #1c73b5;
+  --water-blue: #1f80c9;
+  --white-lilac: #f3f9f8;
+  --white-smoke: #f6f6f6;
+  --strom-dust: #616161;
+  --mountain-mist: #959595;
+  --pale-blue-lily: #d6ede7;
+  --light-grey: #d9d9d9;
+  --water: #e8f2f9;
+  --aqua-squeeze: #F3FAF8;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.rdrCalendarWrapper , .rdrDateRangeWrapper{
+  border : 2px solid rgb(235, 234, 234) !important;
+  // height: 500px !important;
+  // width: 700px!important;
+  border-radius: 5px!important;
+}
+
+
+
+// .rdrDefinedRangesWrapper,
+// .rdrDateDisplayWrapper {
+//   // display: none;
+// }
+
+.rdrDateRangePickerWrapper {
+  width: 100%;
+
+  .rdrDateRangeWrapper {
+    width: inherit;
+  }
+}
+
+.rdrInputRanges{
+  display:  none;
+}
+
+
+.rdrMonth {
+  width: 100%;
+}
+
+.rdrMonthAndYearWrapper {
+  height: 80px;
+  background-color: var(--teal);
+  padding: 0;
+  justify-content: center;
+}
+
+.rdrWeekDays {
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rdrWeekDay {
+  font-size: clamp(18px, 1.1vw, 22px);
+}
+
+.rdrInfiniteMonths {
+  height: 500px !important;
+}
+
+.rdrMonth {
+  height: 500px !important;
+}
+
+.rdrDay {
+  height: 70px !important;
+}
+
+// dates font size
+.rdrDayNumber {
+  font-size: clamp(12px, 1vw, 14px);
+}
+
+// this class is for date top/btoom spacing
+.rdrDay {
+  height: 1.375rem !important;
+}
+
+// weekdays font size and color
+.rdrWeekDay {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 2.667em;
+  color: rgb(132, 144, 149);
+}
+
+.rdrYearPicker {
+  display: none;
+}
+
+.rdrMonthAndYearPickers {
+  flex: unset;
+
+  select {
+    color: var(--white);
+    background: none;
+    padding: 20px;
+    font-size: clamp(18px, 1.1vw, 22px);
+  }
+}
+
+.rdrNextPrevButton {
+  background: transparent;
+}
+
+.rdrPprevButton {
+  i {
+    border-color: transparent rgb(248, 249, 249) transparent transparent;
+    border-width: 6px 8px 6px 6px;
+  }
+}
+
+.rdrNextButton {
+  i {
+    border-color: transparent transparent transparent rgb(248, 250, 252);
+    border-width: 8px 6px 8px 8px;
+  }
+}
+
+.rdrEndEdge,
+.rdrStartEdge,
+.rdrInRange {
+  // border-radius: 0 !important;
+  // left: 10px;
+  // color: var(--water) !important;
+
+  &:hover {
+    border: none;
+    outline: none;
+  }
+}
+
+.rdrDay:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span {
+  color: #000 !important;
+}
+
+.rdrDay:focus {
+  outline: none !important;
+}
+
+.rdrDayHovered {
+  outline: none !important;
+  border: none !important;
+  color: transparent !important;
+}
+
+
+// Google Search Place
+
+.pac-container {
+  background-color: var(--white);
+  color: var(--mountain-mist);
+  height: auto;
+  box-shadow: 0px 7px 12px 0px var(--light-grey);
+  z-index: 3002;
+
+  .pac-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: clamp(12px, 1vw, 14px);
+    color: var(--teal);
+    padding-left: 10px;
+
+    .pac-icon {
+      background-image: none;
+      display: none;
+    }
+
+    .pac-matched {
+      font-size: clamp(16px, 1.3vw, 18px);
+      color: var(--bluish);
+    }
+
+    .pac-item-query {
+      font-size: clamp(16px, 1.3vw, 18px);
+      color: var(--bluish);
+    }
+
+    &:hover {
+      background-color: var(--light-grey);
+      cursor: pointer;
+  }
+  }
+}
+
+.pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+
+    background-image: none !important;
+    height: 0px;
+}
+
+
+.fullwidth {
+  width: 100% !important;
+}
+
+.slider {
+  height: auto;
+  width: 100%;
+  padding: 0 10px;
+  position: relative;
+  top: -7px;
+
+
+  .slick-track {
+    width: 1800px !important;
+    top: -11px;
+  }
+  
+  .slick-slide {
+    margin-right: 10px;
+    width: 200px !important;
+
+    @include media-break-point-down(xl) {
+      width: 180px !important;
+    }
+
+    @include media-break-point-down(xxl) {
+      width: 180px !important;
+    }
+  }
+}

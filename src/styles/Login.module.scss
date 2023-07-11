@@ -1,0 +1,10 @@
+@import '@Assets/styles/Colors.scss';
+@import '@Assets/styles/Mixins.scss';
+
+.login {
+  flex-direction: column;
+
+  .loginContainer {
+    padding: 20px 0;
+  }
+}

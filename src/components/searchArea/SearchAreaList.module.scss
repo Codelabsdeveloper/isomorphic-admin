@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.searcharealist {
+  flex-direction: column;
+  padding-bottom: 30px;
+
+
+  .addresscontainer {
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+      .storename {
+          color: var(--teal);
+          font-size: 23px;
+          font-family: 'Roboto', sans-serif;
+      }
+
+      .address {
+        color: gray;
+        margin-bottom: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+  }
+
+  .button {
+    width: 60px;
+    padding: 5px;
+    min-width: 20px;
+    font-size: 14px;
+    min-height: 10px;
+    margin-left: 0;
+  }
+
+  .buttonaddall {
+    width: 100%;
+    padding: 5px;
+    min-width: 20px;
+    font-size: 14px;
+    min-height: 10px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}

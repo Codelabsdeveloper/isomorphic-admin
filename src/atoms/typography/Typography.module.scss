@@ -1,0 +1,152 @@
+@import '@Assets/styles/Variables.scss';
+@import '@Assets/styles/Mixins.scss';
+@import '@Assets/styles/Colors.scss';
+
+.tag_h1 {
+  @include include-heading-styles;
+}
+
+.tag_h1_regular {
+  @include include-heading-styles(h1_regular);
+}
+
+.tag_h1_w {
+  font-style: normal;
+
+  @include include-heading-styles(h1_w);
+}
+
+.tag_h1_light {
+  @include include-heading-styles(h1_light);
+}
+
+.tag_h1_w_bold {
+  font-style: normal;
+  font-size: clamp(28px, 1.8vw, 32px);
+
+  @include include-heading-styles(h1_w_bold);
+}
+
+.tag_h1_sm {
+  @include include-heading-styles(h1_sm);
+}
+
+.tag_h2 {
+  @include include-heading-styles(h2);
+}
+
+.tag_h2_w {
+  @include include-heading-styles(h2_w);
+}
+
+.tag_h3 {
+  @include include-heading-styles(h3);
+}
+
+.tag_h3_wb {
+  @include include-heading-styles(h3_wb);
+}
+
+.tag_h4 {
+  @include include-heading-styles(h4);
+}
+
+.tag_h5 {
+  @include include-heading-styles(h5);
+}
+
+.tag_p_bold {
+  @include include-heading-styles(p_bold);
+}
+
+.tag_p_small {
+  @include include-heading-styles(p_small);
+}
+
+.tag_p {
+  font-size: clamp(14px, 0.9vw, 16px);
+
+  @include media-break-point-up(sm) {
+    font-size: clamp(14px, 0.9vw, 16px);
+  }
+}
+
+.tag_small {
+  font-size: clamp(15px, 1.25vw, 17px);
+  font-weight: 400;
+
+  @include media-break-point-up(sm) {
+    font-size: clamp(14px, 0.9vw, 16px);
+  }
+}
+
+.tag_small_bold {
+  font-size: clamp(12px, 1vw, 14px);
+  font-family: neuePlak-bold;
+
+  @include media-break-point-up(sm) {
+    font-size: clamp(14px, 0.9vw, 16px);
+  }
+}
+
+.tag_lg {
+  font-size: clamp(15px, 1.25vw, 17px);
+  font-family: neuePlak-regular;
+
+  @include media-break-point-up(lg) {
+    font-size: clamp(15px, 1.25vw, 17px);
+  }
+}
+
+.tag_lg_bold {
+  font-size: clamp(14px, 0.9vw, 16px);
+  font-family: neuePlak-bold;
+
+  @include media-break-point-up(lg) {
+    font-size: clamp(15px, 1.25vw, 17px);
+  }
+}
+
+.tag_p_bold_regular {
+  font-size: clamp(16px, 1.3vw, 18px);
+  @include media-break-point-up(lg) {
+    font-size: clamp(16px, 1.3vw, 18px);
+  }
+}
+
+.tag_lg_small {
+  @include include-heading-styles(lg_small);
+}
+
+.tag_lg_title {
+  @include include-heading-styles(lg_title);
+}
+
+.tag_h1,
+.tag_h1_light,
+.tag_h2,
+.tag_h2_w,
+.tag_h3,
+.tag_h4,
+.tag_h5,
+.tag_p,
+.tag_h1_sm,
+.tag_h1_w,
+.tag_small,
+.tag_p_bold,
+.tag_p_small,
+.tag_p_bold_regular .lg {
+  letter-spacing: 0.32px;
+}
+
+.theme {
+  &-error {
+    color: var(--red) !important;
+    margin: 0;
+    font-size: clamp(14px, 0.9vw, 16px);
+  }
+
+  &-warning {
+    color: $error-red;
+  }
+}

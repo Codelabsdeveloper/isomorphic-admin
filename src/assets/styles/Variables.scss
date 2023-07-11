@@ -1,0 +1,56 @@
+/**
+ * Extra small devices (portrait phones, less than 576px)
+ * No media query since mobile is default
+ * 1. Small devices (landscape phones, 576px and up)
+ * 2. Medium devices (tablets, 768px and up)
+ * 3. Large devices (desktops, 992px and up)
+ * 4. X-Large devices (large desktops, 1200px and up)
+ * 5. XX-Large devices (larger desktops, 1400px and up)
+ */
+$BREAK_POINTS: sm, md, lg, xl, xxl;
+$BREAK_POINTS_MAP: (sm: 576, md: 768, lg: 992, xl: 1200, xxl: 1400);
+
+// Font configuration
+$baseMobileFontSize: 14px;
+$baseDesktopFontSize: 16px;
+$baseLineHeight: 1.4;
+$baseFontWeight: 400;
+$baseLetterSpacing: 0.32px;
+$base-font-fallback: helvetica,arial,sans-serif;
+$NeuePlakRegular: neueplak-regular, $base-font-fallback;
+$NeuePlakWideBold: neueplak-widebold, $base-font-fallback;
+$NeuePlakBold: neuePlak-bold, $base-font-fallback;
+$ProximaNova: 'proxima-nova';
+$FontProximaNovaCondensed: 'proxima-nova-con';
+$FontProximaNovaExtraCondensed: 'proxima-nova-ext-con';
+
+// Heading size options
+$OPTIONS_TYPE: (
+  "h1": (28px,normal,800,1.1,$NeuePlakRegular,32px,42px),
+  "h1_regular": (28px,normal,800,1.1,$NeuePlakRegular,null,null),
+  "h1_light": (28px,normal,600,1.1,$NeuePlakRegular,null,null),
+  "h1_sm": (36px,normal,800,1.1,$NeuePlakWideBold,null,null),
+  "h1_w": (28px,normal,800,1.1,$NeuePlakWideBold,32px,42px),
+  "h1_w_bold": (28px,normal,800,1.1,$NeuePlakWideBold,null,null),
+  'h2': (24px,normal,800,1.1,$NeuePlakRegular,24px,32px),
+  'h2_w': (24px,normal,normal,1.1,$NeuePlakWideBold,null,null),
+  'h3': (20px,normal,800,1.1,$NeuePlakRegular,20px,24px),
+  'h3_wb': (18px,normal,800,1.1,$NeuePlakWideBold,null,null),
+  'h4': (16px,normal,700,null,$NeuePlakRegular,20px,null),
+  'h5': (14px,normal,700,null,$NeuePlakRegular,16px,null),
+  'lg': (15px,normal,700,null,$NeuePlakRegular,null,null),
+  'lg_title': (16px,normal,400,null,$NeuePlakRegular,null,null),
+  'lg_small': (14px,normal,400,null,$NeuePlakRegular,null,null),
+  'p_bold': (14px,normal,600,null,$NeuePlakWideBold,null,null),
+  'p_bold_regular': (14px,normal,800,null,$NeuePlakRegular,null,null),
+  'p_small': (14px,normal,400,null,$NeuePlakRegular,null,null),
+);
+
+//z-index
+$zindex-dropdown:          1000;
+$zindex-fixed:             1010;
+$zindex-overlay:           1020;
+$zindex-modal:             1030;
+$zindex-modal-content:     1031;
+$zindex-popover:           1040;
+$zindex-tooltip:           1050;

@@ -1,0 +1,13 @@
+.icon {
+  vertical-align: middle;
+
+  &-link {
+    cursor: pointer;
+  }
+
+  &-disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+  }
+}

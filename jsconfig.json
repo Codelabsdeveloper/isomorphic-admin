@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "es2017"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "paths": {
+      "@App/*": ["src/app/*"],
+      "@Assets/*": ["src/assets/*"],
+      "@Atoms/*": ["src/atoms/*"],
+      "@Hooks/*": ["src/hooks/*"],
+      "@Components/*": ["src/components/*"],
+      "@Utils/*": ["src/utils/*"],
+      "@Constants/*": ["src/constants/*"],
+      "@Configs/*": ["src/configs/*"],
+      "@Helpers/*": ["src/helpers/*"],
+      "@Styles/*": ["src/styles/*"],
+      "@Store/*": ["src/store/*"]
+    },
+    "strict": true,
+    "target": "es2017"
+  },
+  "exclude": ["node_modules", ".next"],
+  "include": ["src/**/*"]
+}

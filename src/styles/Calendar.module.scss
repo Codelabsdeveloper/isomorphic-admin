@@ -1,0 +1,49 @@
+@import '@Assets/styles/Colors.scss';
+@import '@Assets/styles/Mixins.scss';
+
+.calendar {
+  overflow: hidden;
+  margin-top: 10px;
+  .card {
+    padding: 10px;
+    background-color: var(--white);
+    width: 100%;
+    height: auto;
+    border-right: 2px solid rgb(235, 234, 234) !important;
+    .header {
+      flex-direction: column;
+      align-items: center;
+      width: inherit;
+
+      .logo {
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    .leftcontainer {
+      padding-top: 20px;
+      width: 100%;
+      font-weight: bold;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+  .rightpanel {
+    // height: 100vh;
+    // justify-content: center;
+    // align-items: center;
+
+    width: 98% !important;
+  }
+
+  .rdrInputRanges{
+    display: none;
+    border: 2px solid red;
+  }
+}
+
+.footer {
+  margin-top: 20px;
+}

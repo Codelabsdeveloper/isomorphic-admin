@@ -1,0 +1,15 @@
+@import '@Assets/styles/Colors.scss';
+@import '@Assets/styles/KeyFrames.scss';
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .loader {
+    animation: none;
+  }
+}
+
+.loader {
+  animation: loadingAnimationBackground 1s infinite;
+  border-color: transparent;
+  outline: none;
+  object-fit: cover;
+}

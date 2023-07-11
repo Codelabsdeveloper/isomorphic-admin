@@ -1,0 +1,23 @@
+.card {
+  width: 100%;
+  box-shadow: 0px 0px 8px 4px #ededed;
+
+  .container {
+    width: 100%;
+    border: none;
+    background-color: var(--white);
+    border-radius: 5px;
+    flex-direction: column;
+
+    .header {
+      padding: 20px;
+
+      .title {
+        padding-right: 5px;
+        color: var(--mountain-mist);
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+  }
+}

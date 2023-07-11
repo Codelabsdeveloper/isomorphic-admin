@@ -1,0 +1,24 @@
+@function generate-breakpoint-width($size, $grids) {
+  $symbol: "%";
+
+  @return #{($size / $grids) * 100 }#{$symbol};
+}
+
+@function find-index-map($current-value, $mapped-list:$BREAK_POINTS_MAP) {
+  // get current key from list
+  $the-list: map-keys($mapped-list);
+
+  //find index of current value
+  @return index($the-list, $current-value);
+}
+
+@function find-next-key-map($current-value, $mapped-list:$BREAK_POINTS_MAP) {
+  // get current key from list
+  $the-list: map-keys($mapped-list);
+
+  //find index of current value and add 1
+  $the-index: ( find-index-map($current-value, $mapped-list) ) + 1;
+
+  // get value from list with new index
+  @return nth($the-list, $the-index);
+}

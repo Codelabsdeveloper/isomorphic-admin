@@ -1,0 +1,14 @@
+@import '@Assets/styles/Colors.scss';
+@import '@Assets/styles/Mixins.scss';
+
+.audience {
+  flex-direction: column;
+
+  .slider  {
+    width: 100% !important;
+  }
+
+  .formfield {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,33 @@
+.successTick {
+  .maincircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: #2fa38340;
+    border-radius: 50%;
+  }
+
+  .outercircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    width: 170px;
+    background-color: #31a48582;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .innercircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    width: 140px;
+    background-color: #2ea283;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+}

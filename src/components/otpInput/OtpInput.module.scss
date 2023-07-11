@@ -1,0 +1,26 @@
+@import '@Assets/styles/Colors.scss';
+@import '@Assets/styles/Mixins.scss';
+
+.otpinput {
+  position: relative;
+
+  .formcontrol {
+    -webkit-transition: none;
+    transition: none;
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--mountain-mist);
+    outline: none;
+    font-size: clamp(25px, 2vw, 30px);
+  }
+
+  .formcontrol:active,
+  .formcontrol:focus {
+    background-color: #ebedf3;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+}

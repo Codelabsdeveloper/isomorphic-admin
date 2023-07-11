@@ -1,0 +1,212 @@
+@import './Functions.scss';
+@import './Variables.scss';
+
+@mixin generate-breakpoint-classes($screenSize, $grids) {
+  @for $i from 1 through $grids {
+    $width: generate-breakpoint-width($i, $grids);
+
+    .col-#{$screenSize}-#{$i} {
+      flex: 0 0 auto;
+      width: #{$width};
+    }
+  }
+}
+
+@mixin media-break-point-up($bp: sm) {
+  $bpVal: map-get($BREAK_POINTS_MAP, $bp);
+
+  @if $bpVal {
+    @media (min-width: #{$bpVal}px) {
+      @content;
+    }
+  }
+}
+
+@mixin media-break-point-down($bp: sm) {
+  $bpVal: map-get($BREAK_POINTS_MAP, $bp);
+
+  @if $bpVal {
+    @media (max-width: #{$bpVal - 0.02}px) {
+      @content;
+    }
+  }
+}
+
+@mixin media-break-point-only($bp: sm) {
+  // get index of the break point
+  $index: find-index-map($bp, $BREAK_POINTS_MAP);
+
+  @if $index {
+    // if there is another key above the selected key, run min and max
+    @if $index < length($BREAK_POINTS_MAP) {
+      @media (min-width: #{map-get($BREAK_POINTS_MAP, $bp)}px) and (max-width: #{map-get($BREAK_POINTS_MAP, find-next-key-map($bp))  - 0.02}px) {
+        @content;
+      }
+    }
+    // if key is the largest value, run only min
+    @else if $index == length($BREAK_POINTS_MAP) {
+      @media (min-width: #{map-get($BREAK_POINTS_MAP, $bp)}px) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin make-text-ellipsis($line: 2) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @supports (-webkit-line-clamp: $line) {
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin arrow-button-circle($direction) {
+  box-shadow: 0 0 6px $very-light-gray;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 9;
+
+  &::before {
+    content: ' ';
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-left: 2px solid $black;
+    border-top: 2px solid $black;
+    margin-left: 18px;
+    margin-top: 5px;
+
+    @if ($direction == 'top') {
+      transform: rotate(45deg);
+    }
+
+    @if ($direction == 'down') {
+      transform: rotate(225deg);
+      margin-top: 0;
+    }
+
+    @if ($direction == 'left') {
+      transform: rotate(308deg);
+      margin-top: 0;
+      margin-left: 20px;
+    }
+
+    @if ($direction == 'right') {
+      transform: rotate(131deg);
+      margin-top: 0;
+      margin-left: 15px;
+    }
+  }
+  @content;
+}
+
+@mixin arrow-button-square($direction) {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 9;
+
+  &::before {
+    content: ' \279E';
+    width: 12px;
+    height: 32px;
+    font-size: clamp(25px, 2vw, 30px);
+    display: block;
+    margin-left: 18px;
+    margin-top: 5px;
+
+    @if ($direction == 'left') {
+      transform: rotate(180deg);
+      margin-top: 0;
+      margin-left: 20px;
+    }
+
+    @if ($direction == 'right') {
+      transform: rotate(0deg);
+      margin-top: 0;
+      margin-left: 15px;
+    }
+  }
+  @content;
+}
+
+@mixin error-msg-styles($shake: false) {
+  @if ($shake == true) {
+    @keyframes shake {
+      10%,
+      90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+
+      20%,
+      80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%,
+      50%,
+      70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%,
+      60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+
+    animation: shake 0.8s linear both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  color: $error-rust;
+  width: 100%;
+}
+
+@mixin construct-heading-styles(
+  $font-size,
+  $font-style,
+  $font-weight,
+  $line-height,
+  $font-family,
+  $sm-font-size,
+  $lg-font-size
+) {
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  font-family: $font-family;
+
+  @if ($sm-font-size) {
+    @include media-break-point-up(sm) {
+      font-size: $sm-font-size;
+    }
+  }
+
+  @if ($lg-font-size) {
+    @include media-break-point-up(lg) {
+      font-size: $lg-font-size;
+    }
+  }
+}
+
+// Custom heading styles mixin
+@mixin include-heading-styles($heading: 'h1') {
+  $values: map-get($OPTIONS_TYPE, $heading);
+
+  @include construct-heading-styles($values...);
+
+  @content;
+}

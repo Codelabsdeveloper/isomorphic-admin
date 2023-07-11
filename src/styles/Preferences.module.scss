@@ -1,0 +1,242 @@
+@import '@Assets/styles/Colors.scss';
+@import '@Assets/styles/Mixins.scss';
+
+.preferences {
+  max-height: 20vh;
+
+  .card {
+    padding: 10px;
+    background-color: var(--white);
+    width: 100%;
+    height: 15vh;
+    @include media-break-point-down(xl) {
+      height: 20vh;
+    }
+
+    .header {
+      justify-content: center;
+      align-items: center;
+      width: inherit;
+      height: 12.5vh;
+      @include media-break-point-down(xl) {
+        height: 20vh;
+      }
+
+      .logo {
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 75%;
+          @include media-break-point-down(xxl) {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+
+  .mapcontainer {
+    .preferencesheader {
+      width: 100%;
+      padding: 10px;
+      background-color: var(--teal);
+      .titleheader {
+        text-transform: uppercase;
+        color: var(--white);
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: space-between;
+        p {
+          margin: 0;
+          padding: 0;
+        }
+        .iconcontainer {
+          gap: 20px;
+          cursor: pointer;
+          align-items: center;
+
+          span {
+            font-size: 16px;
+
+            .text {
+              font-size: 14px;
+              position:relative;
+              top: -3px;
+              padding-left: 2px;
+              text-transform: none;
+            }
+          }
+        }
+      }
+      .filtersheader {
+        width: 100%;
+        height: 55px;
+        @include media-break-point-down(xl) {
+          height: 55px;
+        }
+
+        .profile {
+          svg {
+            fill: var(--white);
+            font-size: 34px;
+            cursor: pointer;
+          }
+        }
+
+        .slidercontainer {
+          z-index: 1;
+          align-self: center;
+          height: inherit;
+
+          .dropdownslist {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            .dropdown {
+              width: calc(100% / 3 - 10px);
+            }
+          }
+
+          .sliderBtns {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            top: 5px;
+            cursor: pointer;
+
+            span {
+              height: 40px;
+              svg {
+                text-align: center;
+                background-color: white;
+                padding: 4px;
+                font-weight: bold;
+                font-size: clamp(30px, 2.2vw, 35px);
+                height: inherit;
+              }
+            }
+          }
+        }
+
+        .filtercol {
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          position: relative;
+          top: 0px;
+          height: 65px;
+        }
+
+        .profilecontainer {
+          width: inherit;
+          padding-left: 20px;
+          position: relative;
+          justify-content: space-between;
+          align-items: center;
+
+          .profilecart {
+            align-items: center;
+            justify-content: space-around;
+
+            .cart {
+              align-items: center;
+              color: var(--white);
+            }
+          }
+
+          .range {
+            color: var(--white);
+          }
+
+          .moreoptions {
+            width: 100%;
+
+            div > div > div {
+              background-color: transparent;
+              border: none;
+              border-bottom: 1px solid;
+              border-color: #dcdada;
+
+              span:nth-child(2) {
+                color: #dcdada;
+              }
+            }
+          }
+
+          .salescheckbox {
+            align-self: center;
+
+            p {
+              margin: 0;
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .myfilters {
+    color: #fff;
+    padding: 10px 0;
+  }
+
+  .allPadding {
+    padding: 10px;
+  }
+}
+
+// .mapwrapper {
+//   position: relative;
+
+.searchareacontainer {
+  // position: absolute;
+  padding: 10px;
+  background-color: var(--white);
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  max-height: calc(100vh - 15vh);
+  width: calc(100% / 6);
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-top: 1px solid grey;
+  padding-bottom: 20px;
+
+  @include media-break-point-down(xl) {
+    max-height: calc(100vh - 20vh);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.mapbody {
+  position: relative;
+  width: 100%;
+  .mapContainer {
+    width: calc(100% - 0%);
+    .mapcontent {
+      min-height: 74vh;
+    }
+    .continueBtn {
+      width: 100%;
+      justify-content: end;
+      padding: 20px;
+    }
+  }
+}
+// }
+
+.btnMarginRight {
+  padding: 50px;
+  border: 2px solid red;
+}
+
+.btm0 {
+  bottom: 0px !important;
+  border: 2px solid red;
+}

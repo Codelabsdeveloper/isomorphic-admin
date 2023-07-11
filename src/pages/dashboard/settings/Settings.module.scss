@@ -1,0 +1,29 @@
+.mainContainer {
+  width: 100%;
+  background-color: var(--aqua-squeeze);
+  padding: 20px;
+
+  .dataStart {
+    margin-top: 20px;
+  }
+
+  .button {
+    color: #109571;
+  }
+
+  .editIcon {
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+.approvalContainer {
+  width: 100%;
+  background-color: var(--aqua-squeeze);
+  padding: 20px;
+  margin-top: 20px;
+
+  .checkboxes {
+    margin-top: 10px;
+  }
+}
